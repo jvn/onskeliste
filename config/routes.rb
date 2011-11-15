@@ -1,4 +1,8 @@
 Onskeliste::Application.routes.draw do
+  resources :friends
+
+  resources :userfriends
+
   resources :users
 
   get "pages/forside"

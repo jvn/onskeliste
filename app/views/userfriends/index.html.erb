@@ -1,0 +1,25 @@
+<h1>Listing userfriends</h1>
+
+<table>
+  <tr>
+    <th>Userid</th>
+    <th>Friendid</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @userfriends.each do |userfriend| %>
+  <tr>
+    <td><%= userfriend.userid %></td>
+    <td><%= userfriend.friendid %></td>
+    <td><%= link_to 'Show', userfriend %></td>
+    <td><%= link_to 'Edit', edit_userfriend_path(userfriend) %></td>
+    <td><%= link_to 'Destroy', userfriend, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Userfriend', new_userfriend_path %>

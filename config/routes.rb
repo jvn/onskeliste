@@ -1,7 +1,12 @@
 Onskeliste::Application.routes.draw do
+
   resources :friends
 
   resources :userfriends
+
+  resources :wishes
+
+  resources :events
 
   resources :users
 

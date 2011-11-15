@@ -1,2 +1,10 @@
-<h1>Pages#forside</h1>
-<p>Find me in app/views/pages/forside.html.erb</p>
+<center>
+
+    <b>Log in som en af følgende:</b> <br/>
+
+    <% @users.each do |user| %>
+        <%= link_to user.username, user %><br/>
+    <% end %>
+
+</center>
+

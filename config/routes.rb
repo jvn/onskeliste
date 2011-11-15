@@ -1,4 +1,6 @@
 Onskeliste::Application.routes.draw do
+  get "pages/forside"
+  root :to => 'pages#forside'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

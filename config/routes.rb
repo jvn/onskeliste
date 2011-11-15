@@ -1,4 +1,8 @@
 Onskeliste::Application.routes.draw do
+  resources :wishes
+
+  resources :events
+
   resources :users
 
   get "pages/forside"

@@ -8,13 +8,22 @@
 
 require 'forgery'
 
-
-@user1 = User.create(:username => 'jvn')
-@user2 = User.create(:username => 'mkl')
+@user2 = User.create(:username => 'jvn')
+@user1 = User.create(:username => 'mkl')
 @user3 = User.create(:username => 'nsl')
-@user4 = Forgery::Name.name_last
 
-@event1 = Event.create(:Event_Name => 'jul', :date => '24/11/2011', :user_id => @user1)
-@event2 = Event.create(:Event_Name => 'paaske', :date => '08/04/2012', :user_id => @user1)
-@event3 = Event.create(:Event_Name => 'foedselsdag', :date => '05/07/2012', :user_id => @user2)
-@event4 = Event.create(:Event_Name => 'konfirmation', :date => '04/04/2012', :user_id => @user3)
+@event1 = Event.create(:Event_Name => 'jul',
+                       :date => '24/11/2011',
+                       :user => @user1)
+
+@event2 = Event.create(:Event_Name => 'paaske',
+                       :date => '08/04/2012',
+                       :user => @user1)
+
+@event3 = Event.create(:Event_Name => 'foedselsdag',
+                       :date => Forgery(:date).date,
+                       :user => @user2)
+
+@event4 = Event.create(:Event_Name => 'konfirmation',
+                       :date => Forgery(:date).date,
+                       :user => @user3)

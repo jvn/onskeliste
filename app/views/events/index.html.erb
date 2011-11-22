@@ -2,8 +2,8 @@
 
 <table>
   <tr>
-    <th>User</th>
-    <th>Event name</th>
+    <th>Dato</th>
+    <th>Event navn</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,7 +11,7 @@
 
 <% @events.each do |event| %>
   <tr>
-    <td><%= event.user_id %></td>
+    <td><%= event.date %></td>
     <td><%= event.Event_Name %></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>

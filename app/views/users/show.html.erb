@@ -26,8 +26,7 @@
                 <tr>
                     <td><%= event.Event_Name %></td>
                     <td><%= event.date %></td>
-                    <td><%= event.user_id %></td>
-                    <td><%= link_to 'Ret', edit_event_path(event) %></td>
+                    <td><%= link_to 'Ret', wishes_path(:id=>event.id) %></td>
                 </tr>
             <% end %>
         </table>

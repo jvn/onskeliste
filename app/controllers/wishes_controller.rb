@@ -2,7 +2,9 @@ class WishesController < ApplicationController
   # GET /wishes
   # GET /wishes.json
   def index
-    @wishes = Wish.all
+    @event_id = params[:id]
+    @event = Event.find_by_id(@event_id)
+    @wishes = @event.wishes
 
     respond_to do |format|
       format.html # index.html.erb

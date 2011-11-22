@@ -6,9 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'forgery'
+
+
 @user1 = User.create(:username => 'jvn')
 @user2 = User.create(:username => 'mkl')
 @user3 = User.create(:username => 'nsl')
+@user4 = Forgery::Name.name_last
 
 @event1 = Event.create(:Event_Name => 'jul', :user_id => @user1)
 @event1 = Event.create(:Event_Name => 'paaske', :user_id => @user1)

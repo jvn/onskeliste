@@ -1,9 +1,40 @@
 <p id="notice"><%= notice %></p>
+
 <p>
-  <div style="float: right; clear: right;"><b>Welkomen </b>
-  <%= @user.username %>        <a href="http://localhost:3000"><button class="btn danger">Log ud</button></div></a>
+  <div style="float: right; clear: right;">
+    <b>Welkomen </b>
+    <%= @user.username %><a href="http://localhost:3000"><button class="btn danger">Log ud</button></a></div>
 </p>
- <center><big>Hvad vil du?</big></center>
+
+
+<center><big>Hvad vil du?</big></center>
+
+
+
+
+
+<div title="Half and half" class="row show-grid">
+    <div class="span8">
+        <table>
+            <tr>
+                <th>Begivenhed</th>
+                <th>dato</th>
+                <th></th>
+            </tr>
+
+            <% @myevents.each do |event| %>
+                <tr>
+                    <td><%= event.Event_Name %></td>
+                    <td><%= event.date %></td>
+                    <td><%= event.user_id %></td>
+                    <td><%= link_to 'Ret', edit_event_path(event) %></td>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+
+    <div class="span8">8</div>
+</div>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

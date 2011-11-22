@@ -10,7 +10,7 @@
 @user2 = User.create(:username => 'mkl')
 @user3 = User.create(:username => 'nsl')
 
-@event1 = Event.create(:Event_Name => 'jul', :user_id => @user1)
-@event1 = Event.create(:Event_Name => 'paaske', :user_id => @user1)
-@event1 = Event.create(:Event_Name => 'foedselsdag', :user_id => @user2)
-@event1 = Event.create(:Event_Name => 'konfirmation', :user_id => @user3)
+@event1 = Event.create(:Event_Name => 'jul', :date => '24/11/2011', :user_id => @user1)
+@event2 = Event.create(:Event_Name => 'paaske', :date => '08/04/2012', :user_id => @user1)
+@event3 = Event.create(:Event_Name => 'foedselsdag', :date => '05/07/2012', :user_id => @user2)
+@event4 = Event.create(:Event_Name => 'konfirmation', :date => '04/04/2012', :user_id => @user3)

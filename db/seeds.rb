@@ -8,8 +8,8 @@
 # encoding: UTF-8
 require 'forgery'
 
-@user2 = User.create(:username => 'jvn')
-@user1 = User.create(:username => 'mkl')
+@user1 = User.create(:username => 'jvn')
+@user2 = User.create(:username => 'mkl')
 @user3 = User.create(:username => 'nsl')
 
 @event1 = Event.create(:Event_Name => 'jul',
@@ -24,6 +24,7 @@ require 'forgery'
 @event4 = Event.create(:Event_Name => 'konfirmation',
                        :date => Forgery(:date).date,
                        :user => @user3)
+
 @wish1 = Wish.create(:wish => 'ps3',
                      :talen => '1',
                      :event => @event1)
@@ -36,4 +37,26 @@ require 'forgery'
 @wish4 = Wish.create(:wish => 'mobil',
                      :talen => '4',
                      :event => @event1)
+
+@userfriend1 = Userfriend.create(:user => @user1)
+@userfriend2 = Userfriend.create(:user => @user2)
+@userfriend3 = Userfriend.create(:user => @user3)
+
+3.times do
+Friend.create(:name => Forgery(:name).first_name,
+              :email => Forgery(:internet).email_address,
+              :userfriend => @userfriend1)
+end
+
+3.times do
+Friend.create(:name => Forgery(:name).first_name,
+              :email => Forgery(:internet).email_address,
+              :userfriend => @userfriend2)
+end
+
+3.times do
+Friend.create(:name => Forgery(:name).first_name,
+              :email => Forgery(:internet).email_address,
+              :userfriend => @userfriend3)
+end
 

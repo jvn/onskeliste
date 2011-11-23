@@ -4,9 +4,9 @@ class FriendsController < ApplicationController
   def index
     @friends = Friend.all
 
-    #respond_to do |format|
-      #format.html # index.html.erb
-      #format.json { render json: @friends }
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @friends }
     end
   end
 

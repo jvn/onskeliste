@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>User:</b>
-  <%= @event.user_id %>
+  <b>Dato:</b>
+  <%= @event.date %>
 </p>
 
 <p>
-  <b>Event name:</b>
+  <b>Navn:</b>
   <%= @event.Event_Name %>
 </p>
 
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Ret', edit_event_path(@event) %> |
+<%= link_to 'tilføj ønske', new_wish_path(:id=>@event.id) %>

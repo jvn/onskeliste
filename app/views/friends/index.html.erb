@@ -2,8 +2,7 @@
 
 <table>
   <tr>
-    <th>Friendid</th>
-    <th>Friendname</th>
+    <th>Navn</th>
     <th>Email</th>
     <th></th>
     <th></th>
@@ -12,8 +11,7 @@
 
 <% @friends.each do |friend| %>
   <tr>
-    <td><%= friend.friendid %></td>
-    <td><%= friend.friendname %></td>
+    <td><%= friend.name %></td>
     <td><%= friend.email %></td>
     <td><%= link_to 'Show', friend %></td>
     <td><%= link_to 'Edit', edit_friend_path(friend) %></td>

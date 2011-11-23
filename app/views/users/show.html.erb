@@ -1,41 +1,54 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+    <p id="notice"><%= notice %></p>
 
+    <p>
+        <center style="padding-top: 40px;">
+            <b>Welkomen</b> <%= @user.username %><a href="http://localhost:3000"></a><br/>
+        </center>
+    </p>
 
+    <div title="Half and half" class="row show-grid">
+        <div class="span8">
+            <center><b>Dine Begivenheder</b></center>
 
-<p><center style="padding-top: 40px;">
-  <b>Welkomen</b> <%= @user.username %><a href="http://localhost:3000"></a></div><br/>
-</center>
-<center>
-  <big>Hvad vil du?</big>
-</center>
-</p>
-
-
-
-
-
-<div title="Half and half" class="row show-grid">
-    <div class="span8">
-        <table>
-            <tr>
-                <th>Begivenhed</th>
-                <th>dato</th>
-                <th></th>
-            </tr>
-
-            <% @myevents.each do |event| %>
+            <table>
                 <tr>
-                    <td><%= event.Event_Name %></td>
-                    <td><%= event.date %></td>
-                    <td><%= link_to 'Ret', wishes_path(:id=>event.id) %></td>
+                    <th>Begivenhed</th>
+                    <th>dato</th>
+                    <th></th>
                 </tr>
-            <% end %>
-        </table>
+
+                <% @myevents.each do |event| %>
+                    <tr>
+                        <td><%= event.Event_Name %></td>
+                        <td><%= event.date %></td>
+                        <td><%= link_to 'Ret', wishes_path(:id=>event.id) %></td>
+                    </tr>
+                <% end %>
+            </table>
+
+            <%= link_to 'Tilføj', new_event_path(:id=>@user.id) %>
+        </div>
+
+        <div class="span8">
+            <center><b>Dine venners Begivenheder</b></center>
+
+            <table>
+                <tr>
+                    <th>Begivenhed</th>
+                    <th>dato</th>
+                    <th></th>
+                </tr>
+
+                <% @myevents.each do |event| %>
+                    <tr>
+                         <td><%= event.Event_Name %></td>
+                         <td><%= event.date %></td>
+                         <td><%= link_to 'Ret', wishes_path(:id=>event.id) %></td>
+                    </tr>
+                <% end %>
+            </table>
+        </div>
     </div>
 
-    <div class="span8">Liste over venners begivenheder</div>
 </div>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

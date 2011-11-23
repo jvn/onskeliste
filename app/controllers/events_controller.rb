@@ -24,6 +24,8 @@ class EventsController < ApplicationController
   # GET /events/new
   # GET /events/new.json
   def new
+    @user_id = params[:id]
+    @user = User.find_by_id(@user_id)
     @event = Event.new
 
     respond_to do |format|

@@ -26,6 +26,8 @@ class WishesController < ApplicationController
   # GET /wishes/new
   # GET /wishes/new.json
   def new
+    @event_id = params[:id]
+    @event = Event.find_by_id(@event_id)
     @wish = Wish.new
 
     respond_to do |format|

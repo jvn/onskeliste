@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
-<div data-scrollspy="scrollspy" class="topbar">
-      <div class="topbar-inner">
-        <div class="container">
-          <ul class="nav">
-            <li><%= link_to 'Ny bruger', new_user_path %></li>
-            <li><%= link_to 'Log ind', root_path %></li>
-          </ul>
-          <ul class="nav secondary-nav">
-            <li><button class="btn danger">Log ud</button></li>
-          </ul>
+    <div data-scrollspy="scrollspy" class="topbar">
+        <div class="topbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li><%= link_to 'Ny bruger', new_user_path %></li>
+                </ul>
+                <ul class="nav secondary-nav">
+                    <li><a href='http://localhost:3000/'><button class="btn danger">Log ud</button></a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </div>
-<head>
-  <title>Onskeliste</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body style="padding-top: 40px;">
 
-<%= yield %>
-
-</body>
+    <head>
+        <title>Onskeliste</title>
+        <%= stylesheet_link_tag    "application" %>
+        <%= javascript_include_tag "application" %>
+        <%= csrf_meta_tags %>
+    </head>
+    <div class="container">
+        <body style="padding-top: 50px;">
+                <%= yield %>
+        </body>
+    </div>
 </html>

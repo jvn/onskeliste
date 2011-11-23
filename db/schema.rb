@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(:version => 20111115174824) do
   end
 
   create_table "friends", :force => true do |t|
-    t.string   "friendname"
+    t.integer  "userfriend_id"
+    t.string   "name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"

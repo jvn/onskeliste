@@ -1,3 +1,4 @@
 class Userfriend < ActiveRecord::Base
-  has_many :friend
+  has_many :friends
+  belongs_to :user
 end

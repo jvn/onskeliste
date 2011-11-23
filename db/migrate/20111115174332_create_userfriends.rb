@@ -1,8 +1,8 @@
 class CreateUserfriends < ActiveRecord::Migration
   def change
     create_table :userfriends do |t|
-      t.integer :userid
-      t.integer :friendid
+      t.integer :user_id
+      t.integer :friend_id
 
       t.timestamps
     end

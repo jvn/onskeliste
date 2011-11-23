@@ -11,8 +11,8 @@
 
 <% @userfriends.each do |userfriend| %>
   <tr>
-    <td><%= userfriend.userid %></td>
-    <td><%= userfriend.friendid %></td>
+    <td><%= userfriend.user_id %></td>
+    <td><%= userfriend.friend_id %></td>
     <td><%= link_to 'Show', userfriend %></td>
     <td><%= link_to 'Edit', edit_userfriend_path(userfriend) %></td>
     <td><%= link_to 'Destroy', userfriend, confirm: 'Are you sure?', method: :delete %></td>

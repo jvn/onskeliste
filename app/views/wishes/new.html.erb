@@ -26,8 +26,9 @@
     <%= f.number_field :talen %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit(:id=>@event.id) %>
   </div>
 <% end %>
 
-<%= link_to 'Back', wishes_path %>
+<%= link_to 'Back', wishes_path(:id=>@event.id) %>
+t

@@ -16,6 +16,8 @@ class WishesController < ApplicationController
   # GET /wishes/1.json
   def show
     @wish = Wish.find(params[:id])
+    @event_id = params[:id]
+    @event = Event.find_by_id(@event_id)
 
     respond_to do |format|
       format.html # show.html.erb
